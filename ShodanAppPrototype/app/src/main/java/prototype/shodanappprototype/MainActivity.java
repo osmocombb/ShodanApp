@@ -2,11 +2,14 @@ package prototype.shodanappprototype;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.os.AsyncTask;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     String SearchString;
     int FoundData;
     FoundDevice device;
-    List list;
+    ArrayList list;
     CustomListAdapter adapter;
     SearchThread mysearch;
     ListView listView;
@@ -63,7 +66,8 @@ public class MainActivity extends AppCompatActivity {
                 SearchString = searchText.getText().toString();
                StartSearchThread();
                String homo = Integer.toString(FoundData);
-               text.setText(homo);
+               String x = homo + getString(R.string.Found_results);
+               text.setText(x);
 
 
                 if(reportHostData != null && list != null){
@@ -73,6 +77,16 @@ public class MainActivity extends AppCompatActivity {
 
                 }
 
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                        Intent myIntent = new Intent(MainActivity.this, InformationOfResult.class);
+                        myIntent.putExtra("deviceInformation", position); //Optional parameters
+                        MainActivity.this.startActivity(myIntent);
+                        Toast.makeText(MainActivity.this,list.get(position).toString(),Toast.LENGTH_SHORT).show();
+                    }
+                });
+
         }
 
         });
@@ -80,16 +94,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
+        // 100 tulosta maksimi ilmaisella shodan-tilillä
     public void StartSearchThread(){
         mysearch = new SearchThread(SearchString,MainActivity.this);
         mysearch.run();
         FoundData = mysearch.GetAnswer;
         reportHostData = mysearch.GetHostReport;
-        list = mysearch.ArrayOfDevices;
+        list = mysearch.ListOfIPS;
     }
 
 
 
 
-}
+
+    }

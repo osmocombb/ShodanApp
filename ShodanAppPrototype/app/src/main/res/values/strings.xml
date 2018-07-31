@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ShodanAppPrototype</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="Found_results"> \u0020 Results! Note that you can only see first 100 results with free account</string>
 </resources>

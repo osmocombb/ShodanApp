@@ -46,6 +46,7 @@ public class FoundDevice {
     public String getCountry(){
         return Country;
     }
+    public String getServer(){return Server;}
     public String getEverythingElse(){
    //     return EverythingElse;
         return "";

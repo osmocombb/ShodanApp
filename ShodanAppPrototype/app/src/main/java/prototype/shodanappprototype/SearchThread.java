@@ -16,7 +16,8 @@ import java.util.List;
 
 public class SearchThread extends Thread{
 
-    List<String> Temp,ArrayOfDevices;
+    ArrayList<String> Temp,ListOfIPS;
+    ArrayList<FoundDevice> ArrayOfDevices;
     FoundDevice foundDevice;
    private String newText;
    private Activity m_activity;
@@ -72,7 +73,7 @@ public class SearchThread extends Thread{
 
                         //get article title
                         //note: change this string to lower case to avoid case sensitive issue
-                        String title = ArrayOfDevices.get(i);
+                        String title = ArrayOfDevices.get(i).getIp();
 
                         boolean trigger = true;
 
@@ -87,7 +88,7 @@ public class SearchThread extends Thread{
                             }
                         }
                         if (trigger == true) {
-                            ArrayOfDevices.add(foundDevice.getIp());
+                            ArrayOfDevices.add(foundDevice);
                         }
 
                     } catch (final Exception e) {
@@ -105,8 +106,9 @@ public class SearchThread extends Thread{
     }
 
     public void CreateListDeviceList(){
-        ArrayOfDevices = new ArrayList<String>();
-        Temp = new ArrayList<String>();
+        ArrayOfDevices = new ArrayList<>();
+        Temp = new ArrayList<>();
+        ListOfIPS = new ArrayList<>();
         int i = 0;
         if(GetHostReport.getBanners() != null){
 
@@ -122,10 +124,13 @@ public class SearchThread extends Thread{
             String[] separateLeft = CurrentString.split("ipStr='");
             String[] separateRight = separateLeft[1].split("'");
             String ip = separateRight[0];
-            foundDevice = new FoundDevice("Name",ip,"Country", "Server");
-            ArrayOfDevices.add(foundDevice.getIp());
+            foundDevice = new FoundDevice("Name",ip,"Country", "Server"); // tämä kesken, tehdään samalla tavalla kuin ip-osoite
+            ArrayOfDevices.add(foundDevice);
+            ListOfIPS.add(foundDevice.getIp());
             i++;
         }
+            DataHandler.getInstance().setList(ArrayOfDevices);
+
         }
 
     }
