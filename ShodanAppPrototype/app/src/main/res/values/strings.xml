@@ -1,5 +1,50 @@
 <resources>
     <string name="app_name">ShodanAppPrototype</string>
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="Found_results"> \u0020 Results! Note that you can only see first 100 results with free account</string>
+    <string name="title_activity_login">Kirjautuminen</string>
+    <string name="Found_results"> \u0020 Tulokset! Huomaa, että näet vain 100 tulosta ilmaisella tilillä</string>
+    <string name="DefaultField">Default</string>
+    <string name="HostName">Palvelimen nimi: \u0020 </string>
+    <string name="Server">Palvelin: \u0020</string>
+    <string name="IP">IP: \u0020</string>
+    <string name="Country">Maa: \u0020</string>
+
+    <string name="Settings">Asetukset</string>
+    <string name="About">Informaatiota </string>
+    <string name="Language">Kieli</string>
+    <string name="Favourites">Suosikit</string>
+    <string name="LogOut">Kirjaudu ulos/sisään</string>
+    <string name="Search">Haku</string>
+    <string name="fi">fi</string>
+    <string name="en">en</string>
+    <string name="sv">sv</string>
+    <string name="favourites_intro">Täältä näet suosikkisi, voit lisätä suosikkeja, kun avaat ip-linkin hakemisen jälkeen</string>
+    <string name="main">Päävalikko</string>
+    <string name="hyperlink">http://google.com</string>
+    <string name="hyperlink2">http://google.com</string>
+    <string name="About_Intro">Tämä ohjelma on epävirallinen versio Shodan.io-sivustosta eikä ole tarkoitettu kaupalliseen käyttöön </string>
+    <string name="About_Links_Info">Sivustoja, joista löytyy lisätietoa Shodanista:</string>
+    <string name="Have_to_Login_first">Sinun täytyy ensiksi kirjautua!</string>
+    <string name="Take_me_to_site">Vie minut sivustolle</string>
+    <string name="Warning_sign">HUOMIOI, ETTÄ TÄMÄ SAATTAA OLLA LAITONTA</string>
+    <string name="Information_of_Device">Laitteen tiedot: </string>
+
+    <string name="Show_More_Information_btn">Show More Information</string>
+
+    <string name="About_More_Information_sites">You can find more information from links below:</string>
+    <string name="Info">Info:</string>
+    <string name="Timestamp">Timestamp:</string>
+    <string name="Os">Os:</string>
+    <string name="Link">Link:</string>
+    <string name="Port">Port:</string>
+    <string name="Version">Version:</string>
+    <string name="Product">Product:</string>
+    <string name="Uptime">Uptime:</string>
+    <string name="Html">Html:</string>
+
+    <string name="Get_Apikey_With_Camera">Get APIKEY WITH CAMERA</string>
+    <string name="Info_Use_Camera">Or use QR-code-scanner to do the job from your computers screen</string>
+    <string name="EditText_ApikeyHere">Apikey here</string>
+    <string name="LogIn">Login</string>
+    <string name="HyperLink_ShodanProfile">https://account.shodan.io/</string>
+    <string name="Info_Go_To_Hyperlink">You can find your APIKEY from your shodan profile:</string>
 </resources>

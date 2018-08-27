@@ -7,22 +7,18 @@ public class FoundDevice {
     private String Country;
    // private String EverythingElse;
    private String Server;
+   private int index;
 
     private  ArrayList<String> data;
-    public FoundDevice(String Name, String Ip, String Country, String Server){
-        this.HostName = Name;
-        this.Ip = Ip;
-        this.Country = Country;
-        this.Server = Server;
+    // FoundDevice ei sisällä muuta kuin indexin, tätä indexiä käytetään Favourite-activityssä jossa kyseisellä indexillä haetaan kaikkien laitteiden listasta oikea laite
+    public FoundDevice(int index){
+
+        this.index = index;
      //   this.EverythingElse = everythingElse;
     }
 
-    public void setData(String Name, String Ip, String Country, String EverythingElse){
-            this.data.add(Name);
-            this.data.add(Ip);
-            this.data.add(Country);
-            this.data.add(EverythingElse);
-    }
+
+
     public void setHostName(String Name){
         this.HostName = Name;
     }
@@ -51,10 +47,11 @@ public class FoundDevice {
    //     return EverythingElse;
         return "";
     }
-
-    public ArrayList<String> getData(){
-
-        return data;
+    //Palautetaan indexi
+    public int getIndex(){
+        return this.index;
     }
+
+
 
 }

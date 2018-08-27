@@ -32,6 +32,7 @@ public class SearchThread extends Thread {
     String country;
     String server;
     String name;
+    int index;
     // CustomUserAdapter adapter;
     public int GetAnswer;
 
@@ -44,9 +45,10 @@ public class SearchThread extends Thread {
 
 
     }
-
+    // Käynnistetään Säie ja varmistetaan vielä, että hakuun ei ole laitettu tyhjää merkkijonoa
     public void run() {
         if (!deviceSearchMade && newText.length() > 0) {
+            //Käytetään ConnectionHandleriä, jolla otetaan yhteys ShodanApiin
             connectionHandler = new ConnectionHandler(newText, m_activity);
             GetAnswer = connectionHandler.ConnectToShodanFacetReport();
             GetHostReport = connectionHandler.ConnectToShodanHostReport();
@@ -54,7 +56,7 @@ public class SearchThread extends Thread {
 
 
         } else {
-
+            //Tarkoitus käyttää hakujen filtteröintiin, vielä tekemättä
             if (newText.length() > 1) {
 
                 //katkaise hakumerkkijono valilyöntien kohdalta
@@ -108,27 +110,37 @@ public class SearchThread extends Thread {
     public int ReturnAnswer() {
         return GetAnswer;
     }
-
+    //Luodaan tarvittavia listoja
     public void CreateListDeviceList() {
     //    ArrayOfDevices = new ArrayList<>();
     //    Temp = new ArrayList<>();
         ListOfIPS = new ArrayList<>();
         DeviceList = new ArrayList<>();
         int i = 0;
-        if (GetHostReport.getBanners() != null) {
+        try {
+            if (GetHostReport.getBanners() != null) {
 
-            while (i < GetHostReport.getBanners().size()) {
-                DeviceList.add(GetHostReport.getBanners().get(i));
-                ip = DeviceList.get(i).getIpStr();
-                country = DeviceList.get(i).getLocation().toString();
-                server = DeviceList.get(i).getIsp();
-                name = DeviceList.get(i).getTitle();
-             //   foundDevice = new FoundDevice(name, ip, country, server); // tämä kesken, tehdään samalla tavalla kuin ip-osoite
-                ListOfIPS.add(DeviceList.get(i).getIpStr());
-                DataHandler.getInstance().setList(DeviceList);
-                i++;
+                while (i < GetHostReport.getBanners().size()) {
+                    DeviceList.add(GetHostReport.getBanners().get(i));
+                    ip = DeviceList.get(i).getIpStr();
+                    country = DeviceList.get(i).getLocation().toString();
+                    server = DeviceList.get(i).getIsp();
+                    name = DeviceList.get(i).getTitle();
+                    index = i;
+                    foundDevice = new FoundDevice(index); // tämä kesken, tehdään samalla tavalla kuin ip-osoite
+                    ListOfIPS.add(DeviceList.get(i).getIpStr());
+                    DataHandler.getInstance().setList(DeviceList);
+                    i++;
+                }
 
             }
+        } catch (NullPointerException e){
+
+        }
+
+    }
+}
+
 
         /*while(i<Temp.size()){
 
@@ -149,11 +161,6 @@ public class SearchThread extends Thread {
 
         }
         */
-
-        }
-    }
-}
-
 
 
 

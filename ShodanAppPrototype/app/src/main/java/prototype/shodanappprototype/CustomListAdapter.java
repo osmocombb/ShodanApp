@@ -20,7 +20,7 @@ public class CustomListAdapter extends ArrayAdapter<FoundDevice>{
     private List items;
     TextView text;
 
-    public CustomListAdapter (Context context, List <FoundDevice> devices){
+    public CustomListAdapter (Context context, List devices){
         super(context,0, devices);
 
         items = devices;

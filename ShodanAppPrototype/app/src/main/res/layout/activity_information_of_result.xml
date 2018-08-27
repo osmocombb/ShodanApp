@@ -2,8 +2,10 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ShodanAppTheme"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_default"
     tools:context=".InformationOfResult">
 
     <TextView
@@ -15,7 +17,8 @@
         android:layout_marginRight="100dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
-        android:text="Information of Device: "
+        android:text="@string/Information_of_Device"
+        android:textColor="@color/orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,13 +27,11 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="29dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="29dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-        android:text="IP: "
-        app:layout_constraintEnd_toStartOf="@+id/ipaddress"
+        android:text="@string/IP"
+        android:textColor="@color/orange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -38,13 +39,11 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="17dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="17dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="19dp"
-        android:text="Country: "
-        app:layout_constraintEnd_toStartOf="@+id/Country"
+        android:textColor="@color/orange"
+        android:text="@string/Country"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -52,14 +51,11 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="295dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="295dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
-        android:text="HostName: "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:textColor="@color/orange"
+        android:text="@string/HostName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -67,13 +63,11 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="25dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="25dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:text="Server: "
-        app:layout_constraintEnd_toStartOf="@+id/Server"
+        android:textColor="@color/orange"
+        android:text="@string/Server"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -81,13 +75,11 @@
         android:id="@+id/ipaddress"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="261dp"
+        android:textColor="@color/orange"
         android:layout_marginLeft="29dp"
-        android:layout_marginRight="261dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="48dp"
-        android:text="123.11.12.1"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/DefaultField"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -95,13 +87,11 @@
         android:id="@+id/Country"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="267dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="267dp"
+        android:textColor="@color/orange"
         android:layout_marginStart="16dp"
         android:layout_marginTop="19dp"
-        android:text="Mexico"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/DefaultField"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/ipaddress" />
 
@@ -109,14 +99,11 @@
         android:id="@+id/HostName"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="79dp"
+        android:textColor="@color/orange"
         android:layout_marginLeft="33dp"
-        android:layout_marginRight="79dp"
         android:layout_marginStart="33dp"
         android:layout_marginTop="18dp"
-        android:text="host-92-44.mehico-online.net"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:text="@string/DefaultField"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/Country" />
 
@@ -124,13 +111,11 @@
         android:id="@+id/Server"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginEnd="209dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="209dp"
+        android:textColor="@color/orange"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
-        android:text="Mexico Telecom"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/DefaultField"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -141,7 +126,7 @@
         android:layout_marginBottom="139dp"
         android:layout_marginTop="121dp"
         android:background="@android:drawable/alert_dark_frame"
-        android:text="NOTE THAT THIS MIGHT BE ILLEGAL! FROM THIS POINT I DONT TAKE ANY RESPONSIBILITIES"
+        android:text="@string/Warning_sign"
         android:textColor="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,10 +135,48 @@
 
     <Button
         android:id="@+id/TakeToSite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Take Me to the device's site"
-        tools:layout_editor_absoluteX="61dp"
-        tools:layout_editor_absoluteY="422dp" />
+        android:layout_width="262dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="41dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginRight="145dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/takemetosite_btn"
+        android:text="@string/Take_me_to_site"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WarningSign"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <Button
+        android:id="@+id/Show_more_info"
+        android:layout_width="232dp"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/showmoreinformation_btn"
+        android:text="@string/Show_More_Information_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/AddToFavourites_btn"
+        android:layout_width="41dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_favorite_red_700_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Show_more_info"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
