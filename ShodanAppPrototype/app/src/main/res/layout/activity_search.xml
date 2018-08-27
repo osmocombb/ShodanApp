@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_default"
+    android:orientation="vertical"
+    tools:context="prototype.shodanappprototype.SearchActivity">
+
+
+    <ListView
+        android:id="@+id/DeviceList"
+        android:layout_width="0dp"
+        android:layout_height="303dp"
+        android:layout_marginTop="55dp"
+        android:textColor="@color/orange"
+        android:scrollbarSize="10dp"
+        android:scrollbarThumbVertical="@drawable/custom_scroll_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchInfoText" />
+
+    <Button
+        android:id="@+id/SearchButton"
+        android:layout_width="137dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/searchbutton"
+        android:text="@string/Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/SearchText"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/orange"
+        android:layout_marginEnd="61dp"
+        android:layout_marginRight="61dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toStartOf="@+id/SearchButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/orange"
+        />
+
+    <TextView
+        android:id="@+id/SearchInfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:text=""
+        android:textColor="@color/orange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchText" />
+
+
+</android.support.constraint.ConstraintLayout>

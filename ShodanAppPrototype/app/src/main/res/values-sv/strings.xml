@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">ShodanAppPrototype</string>
+    <string name="title_activity_login">Logga in</string>
+    <string name="Found_results"> \u0020 Resultat! Observera att du bara kan se första 100 resultat med gratis konto</string>
+    <string name="DefaultField">Standard</string>
+    <string name="HostName">Värdnamn: \u0020 </string>
+    <string name="Server">Server: \u0020</string>
+    <string name="IP">IP: \u0020</string>
+    <string name="Country">Land: \u0020</string>
+
+    <string name="Settings">Inställningar</string>
+    <string name="About">Handla om </string>
+    <string name="Language">Språk</string>
+    <string name="Favourites">Favoriter</string>
+    <string name="LogOut">Logga ut/in</string>
+    <string name="Search">Sök</string>
+    <string name="fi">fi</string>
+    <string name="en">en</string>
+    <string name="sv">sv</string>
+    <string name="favourites_intro">Här kan du hitta dina favorit enheter, du kan lägga till fler favoriter när du öppnar FoundDevice-Ip från sökning</string>
+    <string name="main">main</string>
+    <string name="hyperlink">http://google.com</string>
+    <string name="hyperlink2">http://google.com</string>
+    <string name="About_Intro">Den här appen är inofficiell version av en Shodan.io-webbplats och är inte för kommersiell användning </string>
+    <string name="About_Links_Info">Länkar för mer information om Shodan:</string>
+    <string name="Have_to_Login_first">Du har inloggad först!</string>
+    <string name="Take_me_to_site">Ta mig till enhetens webbplats</string>
+    <string name="Warning_sign">OBSERVERA ATT DET HÄR KAN VARA OLAGLIGT! FRÅN DENNA PUNKT TAR JAG INTE NÅGRA ANSVARSFÖRHÅLLANDEN</string>
+    <string name="Information_of_Device">Information om enheten: </string>
+
+    <string name="Info">Info:</string>
+    <string name="Timestamp">Timestamp:</string>
+    <string name="Os">Os:</string>
+    <string name="Link">Link:</string>
+    <string name="Port">Port:</string>
+    <string name="Version">Version:</string>
+    <string name="Product">Product:</string>
+    <string name="Uptime">Uptime:</string>
+    <string name="Html">Html:</string>
+
+    <string name="Get_Apikey_With_Camera">Get APIKEY WITH CAMERA</string>
+</resources>

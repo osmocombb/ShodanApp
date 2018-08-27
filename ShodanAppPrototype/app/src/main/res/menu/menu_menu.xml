@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+<item
+    android:title=""
+    android:icon="@drawable/ic_home_orange_700_24dp"
+    android:id="@+id/main"
+    app:showAsAction="always"
+
+    >
+</item>
+
+
+    <item
+    android:title=""
+    android:icon="@drawable/ic_toc_orange_700_24dp"
+    android:id="@+id/MoreOptions"
+    app:showAsAction="always"
+    >
+
+    <menu>
+
+
+
+        <item
+            android:title="@string/Favourites"
+            android:id="@+id/favourites"
+            android:icon="@drawable/ic_favorite_red_700_24dp"
+            >
+            </item>
+        <item
+            android:title="@string/LogOut"
+            android:id="@+id/LogOut"
+            android:icon="@drawable/ic_lock_black_24dp"
+
+            >
+            </item>
+        <item
+            android:title="@string/About"
+            android:icon="@drawable/ic_info_outline_white_24dp"
+            android:id="@+id/About"
+
+            >
+
+        </item>
+
+        <item
+            android:title="@string/Settings"
+            android:icon="@drawable/ic_build_orange_a700_24dp"
+            android:id="@+id/Settings"
+
+            >
+
+        </item>
+
+        <item
+            android:id="@+id/Language"
+            android:icon="@drawable/ic_language_green_800_24dp"
+            android:title="@string/Language">
+
+            <menu>
+
+
+                <item
+                    android:id="@+id/fi_language"
+                    android:title=""
+                    android:icon="@drawable/fi"
+
+                    />
+                <item
+                    android:id="@+id/sv_language"
+                    android:title=""
+                    android:icon="@drawable/se"
+
+                    />
+                <item
+                    android:id="@+id/en_language"
+                    android:title=""
+                    android:icon="@drawable/gb"
+
+                    />
+
+            </menu>
+
+        </item>
+
+    </menu>
+
+</item>
+
+</menu>
